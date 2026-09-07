@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { personalInfo } from "../data/portfolioData";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("idle");
@@ -15,7 +17,7 @@ export default function Contact() {
     setStatus("loading");
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch(API_URL + "/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
