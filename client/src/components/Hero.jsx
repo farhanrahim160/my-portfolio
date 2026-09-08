@@ -20,9 +20,10 @@ export default function Hero() {
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.6 }} className="max-w-xl mx-auto text-gray-600 dark:text-gray-400 mb-8">
           {personalInfo.tagline}
         </motion.p>
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1, duration: 0.6 }} className="flex gap-4 justify-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1, duration: 0.6 }} className="flex flex-wrap gap-4 justify-center">
           <a href="#projects" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">View My Work</a>
           <a href="#contact" className="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:border-blue-500 text-gray-700 dark:text-gray-200 rounded-lg font-medium transition-colors">Contact Me</a>
+          <a href="/Farhan_Rahim_CV.pdf" download className="px-6 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded-lg font-medium transition-colors">Download CV</a>
         </motion.div>
       </div>
     </section>
